@@ -1,0 +1,358 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+body {
+    background-color: #1c1c1c;
+
+    .contenedor {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        header {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            flex-flow: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://rimasmusic.com/static/media/header.7f2072d3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            .fondonegro {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: .7;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+            }
+
+            .nombre {
+                z-index: 123;
+                padding-top: 40px;
+                font-family: "Poppins", serif;
+                font-weight: 900;
+                font-style: italic;
+                font-size: 350%;
+                margin-left: 40px;
+            }
+
+            .nav {
+                display: flex;
+                flex-flow: row;
+                list-style: none;
+
+                li {
+                    margin: 10px;
+                    padding: 20px;
+                    color: white;
+                    position: relative;
+                    transition: .5s all;
+
+                    &::after {
+                        content: '';
+                        background-color: white;
+                        position: absolute;
+                        width: 0%;
+                        height: 3px;
+                        left: 45%;
+                        bottom: 0;
+                        transition: .5s all;
+                    }
+
+                    &:hover::after {
+                        left: 0;
+                        width: 100%;
+                    }
+
+                    a {
+                        transition: .5s all;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .descripcion {
+            padding: 50px;
+            margin-left: 200px;
+            margin-right: 200px;
+            text-align: justify;
+            font-size: 20px;
+            background-color: #141414;
+            border: 5px solid white;
+            margin-bottom: 30px;
+        }
+
+        .proyectos {
+
+            width: 70%;
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                margin: 50px;
+                font-size: 80px;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            .proyecto {
+                height: 700px;
+                padding: 80px 150px;
+                border: 5px solid white;
+                background-color: #141414;
+                margin-bottom: 50px;
+                display: flex;
+                flex-flow: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+
+                p {
+                    text-align: justify;
+                }
+
+                img {
+                    width: 100%;
+                    height: 400px;
+                }
+
+            }
+        }
+
+        .artistas {
+            margin-top: 50px;
+            width: 60%;
+            display: flex;
+            flex-flow: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                margin: 50px;
+                font-size: 80px;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            .artista {
+                display: flex;
+                flex-flow: row;
+                width: 100%;
+                background-color: #141414;
+                border: 3px solid white;
+                transition: .5s all;
+                margin-bottom: 30px;
+
+                &:hover {
+                    border: 3px solid #1c1c1c;
+                    background-color: white;
+                    ;
+                }
+
+                &:hover .dataArtista span,
+                &:hover .dataArtista p {
+                    color: black;
+                }
+            }
+
+            .dataArtista {
+                color: white;
+                width: 80%;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-family: "Poppins", serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 30px;
+                    transition: .5s all;
+                }
+
+                p {
+                    padding-left: 50px;
+                    padding-right: 50px;
+                    text-align: justify;
+                    transition: .5s all;
+                }
+            }
+        }
+
+        .badbunny {
+            border: 2px solid white;
+
+            &:hover .fotobadbunny {
+                background-size: 500px 500px;
+            }
+
+            .fotobadbunny {
+                width: 40%;
+                height: 300px;
+                background-position: center;
+                background-image: url('https://i.scdn.co/image/ab6761610000517481f47f44084e0a09b5f0fa13');
+                background-size: 300px 300px;
+                transition: .5s all;
+
+            }
+        }
+
+        .omarcourtz {
+            border: 2px solid white;
+
+            &:hover .fotoomarcourtz {
+                background-size: 500px 500px;
+            }
+
+            .fotoomarcourtz {
+                width: 40%;
+                height: 300px;
+                background-position: center;
+                background-image: url('https://yt3.googleusercontent.com/hdioVye5CRVuxJ_xQEk5ahHWuKC_8yZQVj5VMkucvG_lYTgGjTtCchuXFF5zsSA8E11ksNplRVg=s900-c-k-c0x00ffffff-no-rj');
+                background-size: 300px 300px;
+                transition: .5s all;
+            }
+        }
+
+        .jhayco {
+            border: 2px solid white;
+
+            &:hover .fotojhayco {
+                background-size: 500px 500px;
+            }
+
+            .fotojhayco {
+                width: 40%;
+                height: 300px;
+                background-position: center;
+                background-image: url('https://images.genius.com/79fb0f0fe10a96205020ee6aa1c65226.1000x1000x1.png');
+                background-size: 300px 300px;
+                transition: .5s all;
+            }
+        }
+
+        form {
+            background-color: #141414;
+            border: 3px solid white;
+            width:30%;
+            padding: 40px;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            b {
+                font-size: 30px;
+                text-align: center;
+            }
+            label{
+                text-align: left;
+                padding-top:30px;
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                background-color: transparent;
+                border: none;
+                border-bottom: 3px solid white;
+                transition: .2s all;
+                resize: none;
+                margin: 15px;
+                width: 100%;
+
+                &::placeholder {
+                    color: white;
+                }
+
+                &:focus {
+                    color: black;
+                    background-color: white;
+                }
+
+                &:focus::placeholder {
+                    color: black;
+                }
+            }
+
+            textarea {
+                height: 200px;
+            }
+
+            input[type="submit"] {
+                cursor: pointer;
+                transition: .5s all;
+                width: 30%;
+                height: 50px;
+                border-radius: 10px;
+                background-color: white;
+                border: 3px solid black;
+                color: black;
+                font-size: 20px;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                    border: 3px solid white;
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        footer {
+            margin-top: 50px;
+            display: flex;
+            flex-flow: column;
+            background-color: #141414;
+            width: 100%;
+            height: 10%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+
+}
+
+.fa-brands {
+    font-size: 20px;
+    margin: 5px;
+    transition: .2s all;
+
+    &:hover {
+        transform: rotate(-20deg) scale(1.4);
+    }
+}
